@@ -1,3 +1,7 @@
+<?php
+include './includes/db.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,85 +49,46 @@
     </div>
   </nav>
   <section class="products min-vh-100 p-sm-5 p-3">
-    <div class="p-sm-5">
+    <div class="p-sm-5 pt-sm-0">
+      <h4 class="text-center text-secondary mb-4">OUR PRODUCTS</h4>
       <div class="row">
-        <div class="col-lg-3 col-md-4 col-6 mb-4" data-aos="fade-up">
-          <a href="productDetails.php?id=1" class="card text-decoration-none text-dark border-0">
+
+        <?php
+        $sql2 = "SELECT * FROM products ORDER BY id DESC LIMIT 4";
+        $result2 = mysqli_query($conn, $sql2);
+        while($rowProduct = mysqli_fetch_assoc($result2)) {
+        ?>
+
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+          <a href="productDetails.php?id=<?php echo $rowProduct['id']; ?>" class="card text-decoration-none text-dark border-0">
             <div class="card-img-top">
-              <img src="./assets/product-temp-1.jpeg" alt="Product" height="250px" width="100%">
+              <img src="./assets/products/<?php echo $rowProduct['mainImage'] ?>" alt="<?php echo $rowProduct['productName'] ?>" height="250px" width="100%">
             </div>
-            <div class="card-body px-0">
-              <h6>Premium Dental Care Products</h6>
-              <p>₹ 2000</p>
+            <div class="card-body border border-2">
+              <h6 class="fw-bold mb-0"><?php echo $rowProduct['productName'] ?></h6>
+              <p><?php echo $rowProduct['shortDesc'] ?></p>
+              <div class="d-flex justify-content-between">
+                <p class="mb-0 fw-bold">₹ <?php echo $rowProduct['price'] ?></p>
+                <div class="mb-0">
+                  <div class="d-flex align-items-center">
+                    <div class="text-warning me-2">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </a>
         </div>
-        <div class="col-lg-3 col-md-4 col-6 mb-4" data-aos="fade-up">
-          <a href="productDetails.php?id=1" class="card text-decoration-none text-dark border-0">
-            <div class="card-img-top">
-              <img src="./assets/product-temp-1.jpeg" alt="Product" height="250px" width="100%">
-            </div>
-            <div class="card-body px-0">
-              <h6>Premium Dental Care Products</h6>
-              <p>₹ 2000</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6 mb-4" data-aos="fade-up">
-          <a href="productDetails.php?id=1" class="card text-decoration-none text-dark border-0">
-            <div class="card-img-top">
-              <img src="./assets/product-temp-1.jpeg" alt="Product" height="250px" width="100%">
-            </div>
-            <div class="card-body px-0">
-              <h6>Premium Dental Care Products</h6>
-              <p>₹ 2000</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6 mb-4" data-aos="fade-up">
-          <a href="productDetails.php?id=1" class="card text-decoration-none text-dark border-0">
-            <div class="card-img-top">
-              <img src="./assets/product-temp-1.jpeg" alt="Product" height="250px" width="100%">
-            </div>
-            <div class="card-body px-0">
-              <h6>Premium Dental Care Products</h6>
-              <p>₹ 2000</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6 mb-4" data-aos="fade-up">
-          <a href="productDetails.php?id=1" class="card text-decoration-none text-dark border-0">
-            <div class="card-img-top">
-              <img src="./assets/product-temp-1.jpeg" alt="Product" height="250px" width="100%">
-            </div>
-            <div class="card-body px-0">
-              <h6>Premium Dental Care Products</h6>
-              <p>₹ 2000</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6 mb-4" data-aos="fade-up">
-          <a href="productDetails.php?id=1" class="card text-decoration-none text-dark border-0">
-            <div class="card-img-top">
-              <img src="./assets/product-temp-1.jpeg" alt="Product" height="250px" width="100%">
-            </div>
-            <div class="card-body px-0">
-              <h6>Premium Dental Care Products</h6>
-              <p>₹ 2000</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6 mb-4" data-aos="fade-up">
-          <a href="productDetails.php?id=1" class="card text-decoration-none text-dark border-0">
-            <div class="card-img-top">
-              <img src="./assets/product-temp-1.jpeg" alt="Product" height="250px" width="100%">
-            </div>
-            <div class="card-body px-0">
-              <h6>Premium Dental Care Products</h6>
-              <p>₹ 2000</p>
-            </div>
-          </a>
-        </div>
+
+        <?php
+        }
+        ?>
+
       </div>
     </div>
   </section>
