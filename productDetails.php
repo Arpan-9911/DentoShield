@@ -42,6 +42,7 @@ if ($result->num_rows != 1) {
         <li><a class="text-dark text-decoration-none" href="index.php">Home</a></li>
         <li><a class="text-dark text-decoration-none border-bottom border-2 border-dark" href="products.php">Products</a></li>
         <li><a class="text-dark text-decoration-none" href="testimonials.php">Testimonials</a></li>
+        <li><a class="text-dark text-decoration-none" href="contact.php">Contact</a></li>
       </ul>
 
       <!-- Mobile Navbar -->
@@ -60,6 +61,7 @@ if ($result->num_rows != 1) {
             <li><a class="text-dark text-decoration-none" href="index.php">Home</a></li>
             <li><a class="text-dark text-decoration-none border-bottom border-2 border-dark" href="products.php">Products</a></li>
             <li><a class="text-dark text-decoration-none" href="testimonials.php">Testimonials</a></li>
+            <li><a class="text-dark text-decoration-none" href="contact.php">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -112,7 +114,7 @@ if ($result->num_rows != 1) {
     </div>
   </section> -->
   <section>
-    <div class="container min-vh-100 p-sm-5 p-3">
+    <div class="container min-vh-100 p-sm-5 p-3" data-aos="fade-up">
       <div class="row">
         <!-- Product Images -->
         <div class="col-md-6 mb-4">
@@ -128,7 +130,6 @@ if ($result->num_rows != 1) {
                     $row['suppImage3'],
                     $row['suppImage4']
                   ];
-
                   foreach ($suppImages as $image) {
                     if (!empty($image)) {
                       echo '
@@ -143,14 +144,12 @@ if ($result->num_rows != 1) {
             </div>
           </div>
         </div>
-
         <!-- Product Details -->
         <div class="col-md-6">
           <h1 class="h2 mb-3"><?php echo $row['productName'] ?></h1>
           <div class="mb-3">
             <span class="h4 me-2">₹ <?php echo $row['price'] ?></span>
           </div>
-
           <div class="mb-3">
             <div class="d-flex align-items-center">
               <div class="text-warning me-2">
@@ -162,10 +161,8 @@ if ($result->num_rows != 1) {
               </div>
             </div>
           </div>
-
-          <p class="mb-0"><?php echo $row['shortDesc'] ?></p>
-          <p class="mb-4"><?php echo $row['longDesc'] ?></p>
-
+          <p class="mb-2"><?php echo nl2br($row['shortDesc']) ?></p>
+          <p class="mb-4"><?php echo nl2br($row['longDesc']) ?></p>
           <!-- Actions -->
           <div class="d-grid gap-2">
             <a href="<?php echo $row['amazon']; ?>" class="btn btn-primary" type="button">
@@ -191,8 +188,8 @@ if ($result->num_rows != 1) {
       </div>
       <div class="col-sm-6">
         <h3 class="mb-4">SUPPORT</h3>
-        <p class="mb-0">9383923983</p>
-        <p>dentoshield@gmail.com</p>
+        <p class="mb-0">9415366403</p>
+        <p>amit.sharma@dentoshieldhealthcare.com</p>
         <p class="mb-0">First Floor, 10, Akshar Upavan Society,</p>
         <p class="mb-0">Opp. ST Bus Station, Dabhoi,</p>
         <p class="mb-0">Ta. Dabhoi, Dist. Vadodara - Gujarat - 391110</p>

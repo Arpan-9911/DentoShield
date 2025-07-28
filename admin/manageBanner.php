@@ -109,8 +109,8 @@ if (mysqli_num_rows($result) > 0) {
       </div>
       <div class="col-sm-6">
         <h3 class="mb-4">SUPPORT</h3>
-        <p class="mb-0">9383923983</p>
-        <p>dentoshield@gmail.com</p>
+        <p class="mb-0">9415366403</p>
+        <p>amit.sharma@dentoshieldhealthcare.com</p>
         <p class="mb-0">First Floor, 10, Akshar Upavan Society,</p>
         <p class="mb-0">Opp. ST Bus Station, Dabhoi,</p>
         <p class="mb-0">Ta. Dabhoi, Dist. Vadodara - Gujarat - 391110</p>

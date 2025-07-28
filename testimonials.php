@@ -21,6 +21,7 @@
         <li><a class="text-dark text-decoration-none" href="index.php">Home</a></li>
         <li><a class="text-dark text-decoration-none" href="products.php">Products</a></li>
         <li><a class="text-dark text-decoration-none border-bottom border-2 border-dark" href="testimonials.php">Testimonials</a></li>
+        <li><a class="text-dark text-decoration-none" href="contact.php">Contact</a></li>
       </ul>
 
       <!-- Mobile Navbar -->
@@ -39,6 +40,7 @@
             <li><a class="text-dark text-decoration-none" href="index.php">Home</a></li>
             <li><a class="text-dark text-decoration-none" href="products.php">Products</a></li>
             <li><a class="text-dark text-decoration-none border-bottom border-2 border-dark" href="testimonials.php">Testimonials</a></li>
+            <li><a class="text-dark text-decoration-none" href="contact.php">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -80,8 +82,8 @@
       </div>
       <div class="col-sm-6">
         <h3 class="mb-4">SUPPORT</h3>
-        <p class="mb-0">9383923983</p>
-        <p>dentoshield@gmail.com</p>
+        <p class="mb-0">9415366403</p>
+        <p>amit.sharma@dentoshieldhealthcare.com</p>
         <p class="mb-0">First Floor, 10, Akshar Upavan Society,</p>
         <p class="mb-0">Opp. ST Bus Station, Dabhoi,</p>
         <p class="mb-0">Ta. Dabhoi, Dist. Vadodara - Gujarat - 391110</p>

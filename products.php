@@ -25,6 +25,7 @@ include './includes/db.php';
         <li><a class="text-dark text-decoration-none" href="index.php">Home</a></li>
         <li><a class="text-dark text-decoration-none border-bottom border-2 border-dark" href="products.php">Products</a></li>
         <li><a class="text-dark text-decoration-none" href="testimonials.php">Testimonials</a></li>
+        <li><a class="text-dark text-decoration-none" href="contact.php">Contact</a></li>
       </ul>
 
       <!-- Mobile Navbar -->
@@ -43,6 +44,7 @@ include './includes/db.php';
             <li><a class="text-dark text-decoration-none" href="index.php">Home</a></li>
             <li><a class="text-dark text-decoration-none border-bottom border-2 border-dark" href="products.php">Products</a></li>
             <li><a class="text-dark text-decoration-none" href="testimonials.php">Testimonials</a></li>
+            <li><a class="text-dark text-decoration-none" href="contact.php">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -52,19 +54,20 @@ include './includes/db.php';
     <div class="p-sm-5 pt-sm-0">
       <h4 class="text-center text-secondary mb-4">OUR PRODUCTS</h4>
       <div class="row">
+        <h1 class="text-center text-danger">Products Coming Soon. Stay Tuned...</h1>
 
-        <?php
-        $sql2 = "SELECT * FROM products ORDER BY id DESC LIMIT 4";
+        <!-- <?php
+        $sql2 = "SELECT * FROM products ORDER BY id DESC";
         $result2 = mysqli_query($conn, $sql2);
         while($rowProduct = mysqli_fetch_assoc($result2)) {
         ?>
 
         <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-          <a href="productDetails.php?id=<?php echo $rowProduct['id']; ?>" class="card text-decoration-none text-dark border-0">
+          <a href="productDetails.php?id=<?php echo $rowProduct['id']; ?>" class="card border-2 text-decoration-none text-dark">
             <div class="card-img-top">
               <img src="./assets/products/<?php echo $rowProduct['mainImage'] ?>" alt="<?php echo $rowProduct['productName'] ?>" height="250px" width="100%">
             </div>
-            <div class="card-body border border-2">
+            <div class="card-body">
               <h6 class="fw-bold mb-0"><?php echo $rowProduct['productName'] ?></h6>
               <p><?php echo $rowProduct['shortDesc'] ?></p>
               <div class="d-flex justify-content-between">
@@ -87,7 +90,7 @@ include './includes/db.php';
 
         <?php
         }
-        ?>
+        ?> -->
 
       </div>
     </div>
@@ -104,8 +107,8 @@ include './includes/db.php';
       </div>
       <div class="col-sm-6">
         <h3 class="mb-4">SUPPORT</h3>
-        <p class="mb-0">9383923983</p>
-        <p>dentoshield@gmail.com</p>
+        <p class="mb-0">9415366403</p>
+        <p>amit.sharma@dentoshieldhealthcare.com</p>
         <p class="mb-0">First Floor, 10, Akshar Upavan Society,</p>
         <p class="mb-0">Opp. ST Bus Station, Dabhoi,</p>
         <p class="mb-0">Ta. Dabhoi, Dist. Vadodara - Gujarat - 391110</p>

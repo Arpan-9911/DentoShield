@@ -30,6 +30,7 @@ if (mysqli_num_rows($result) > 0) {
         <li><a class="text-dark text-decoration-none border-bottom border-2 border-dark" href="index.php">Home</a></li>
         <li><a class="text-dark text-decoration-none" href="products.php">Products</a></li>
         <li><a class="text-dark text-decoration-none" href="testimonials.php">Testimonials</a></li>
+        <li><a class="text-dark text-decoration-none" href="contact.php">Contact</a></li>
       </ul>
 
       <!-- Mobile Navbar -->
@@ -48,18 +49,22 @@ if (mysqli_num_rows($result) > 0) {
             <li><a class="text-dark text-decoration-none border-bottom border-2 border-dark" href="index.php">Home</a></li>
             <li><a class="text-dark text-decoration-none" href="products.php">Products</a></li>
             <li><a class="text-dark text-decoration-none" href="testimonials.php">Testimonials</a></li>
+            <li><a class="text-dark text-decoration-none" href="contact.php">Contact</a></li>
           </ul>
         </div>
       </div>
     </div>
   </nav>
-  <section class="banner min-vh-100">
-    <img src="./assets/banner/<?php echo $row['banner']; ?>" alt="Banner" width="100%" class="vh-100">
+  <section class="banner min-vh-90">
+    <img src="./assets/banner/<?php echo $row['banner']; ?>" alt="Banner" width="100%" class="vh-90">
     <!-- <img src="./assets/banner-small.jpg" alt="Banner" width="100%" class="d-md-none d-block"> -->
     <div class="banner-center">
       <h1 class="text-white fw-bold text-nowrap">Dento Shield</h1>
       <p class="text-white">Sharing the complete dental protection.</p>
-      <a href="products.php" class="btn btn-light mt-2 px-4 rounded-pill">VIEW PRODUCTS</a>
+      <div class="d-flex flex-column flex-md-row align-items-center gap-2">
+        <a href="products.php" class="btn btn-outline-light mt-2 px-4 rounded-pill text-nowrap">VIEW PRODUCTS</a>
+        <a href="./assets/brochure.pdf" class="btn btn-outline-light mt-2 px-4 rounded-pill text-nowrap" target="_blank">BROCHURE</a>
+      </div>
     </div>
   </section>
   <section class="view-products p-sm-5 p-3">
@@ -89,19 +94,20 @@ if (mysqli_num_rows($result) > 0) {
     <div class="products mt-5 p-sm-5">
       <p class="text-center mb-4 text-secondary">LATEST PRODUCTS</p>
       <div class="row">
+        <h1 class="text-center text-danger">Products Coming Soon. Stay Tuned...</h1>
 
-        <?php
+        <!-- <?php
         $sql2 = "SELECT * FROM products ORDER BY id DESC LIMIT 4";
         $result2 = mysqli_query($conn, $sql2);
         while($rowProduct = mysqli_fetch_assoc($result2)) {
         ?>
 
         <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-          <a href="productDetails.php?id=<?php echo $rowProduct['id']; ?>" class="card text-decoration-none text-dark border-0">
+          <a href="productDetails.php?id=<?php echo $rowProduct['id']; ?>" class="card text-decoration-none text-dark border-2">
             <div class="card-img-top">
               <img src="./assets/products/<?php echo $rowProduct['mainImage'] ?>" alt="<?php echo $rowProduct['productName'] ?>" height="250px" width="100%">
             </div>
-            <div class="card-body border border-2">
+            <div class="card-body">
               <h6 class="fw-bold mb-0"><?php echo $rowProduct['productName'] ?></h6>
               <p><?php echo $rowProduct['shortDesc'] ?></p>
               <div class="d-flex justify-content-between">
@@ -124,7 +130,7 @@ if (mysqli_num_rows($result) > 0) {
 
         <?php
         }
-        ?>
+        ?> -->
 
       </div>
     </div>
@@ -148,7 +154,7 @@ if (mysqli_num_rows($result) > 0) {
         </div>
       </div>
     </div>
-    <div class="mt-5" data-aos="fade-up">
+    <div class="mt-5 shadow" data-aos="fade-up">
       <img src="./assets/home-customer-1.jpeg" alt="Customer banner" width="100%" class="rounded-3">
     </div>
   </section>
@@ -165,15 +171,15 @@ if (mysqli_num_rows($result) > 0) {
         <div class="carousel-item text-center">
           <div class="max-w-500">
             <h4>★★★★★</h4>
-            <p class="mt-2">Dentoshield has transformed my dental care routine! Their products are top-notch and the service is exceptional. Highly recommend for anyone seeking quality dental pharmacy items.</p>
-            <h4 class="mt-5">Arpan</h4>
+            <p class="mt-2">I've never experienced such reliable and fast delivery for dental products. Dentoshield is my go-to pharmacy now. Everything I ordered was genuine and professionally packed.</p>
+            <h5 class="mt-5">Suryansh Bajpai</h5>
           </div>
         </div>
         <div class="carousel-item text-center">
           <div class="max-w-500">
             <h4>★★★★★</h4>
-            <p class="mt-2">Dentoshield has transformed my dental care routine! Their products are top-notch and the service is exceptional. Highly recommend for anyone seeking quality dental pharmacy items.</p>
-            <h4 class="mt-5">Arpan</h4>
+            <p class="mt-2">Excellent experience! Dentoshield not only offers premium dental products but also provides helpful guidance for usage. Truly a brand that cares about oral health.</p>
+            <h5 class="mt-5">Shashwat V.</h5>
           </div>
         </div>
       </div>
@@ -199,8 +205,8 @@ if (mysqli_num_rows($result) > 0) {
       </div>
       <div class="col-sm-6">
         <h3 class="mb-4">SUPPORT</h3>
-        <p class="mb-0">9383923983</p>
-        <p>dentoshield@gmail.com</p>
+        <p class="mb-0">9415366403</p>
+        <p>amit.sharma@dentoshieldhealthcare.com</p>
         <p class="mb-0">First Floor, 10, Akshar Upavan Society,</p>
         <p class="mb-0">Opp. ST Bus Station, Dabhoi,</p>
         <p class="mb-0">Ta. Dabhoi, Dist. Vadodara - Gujarat - 391110</p>
